@@ -12,7 +12,9 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+body{
+background-color: black;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,6 +30,7 @@
   color: #61dafb;
 }
 
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -36,3 +39,13 @@
     transform: rotate(360deg);
   }
 }
+
+.vertical {
+  border-left: 2px solid white;
+  height: 120px;
+  position:absolute;
+  left: 35%;
+  display: inline-block;
+  
+}
+
