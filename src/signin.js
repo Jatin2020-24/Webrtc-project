@@ -44,9 +44,9 @@ class Signin extends Component {
 			<div className="Sigin">
         <div className="container">
 			
-      <img className="mt-4 ml-4 text-center" src="output-onlinepngtools.png"height="130"width="270"></img>
+      <img className="mt-4 logo" src="output-onlinepngtools.png"height="130"width="270"></img>
       
-      <div class = "vertical mt-4">
+      <div class = "vertical float-left mt-4">
       <h1 className="text-light mt-3 p-4">Meetings</h1>
       </div>
       

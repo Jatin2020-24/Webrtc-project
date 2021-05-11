@@ -44,8 +44,17 @@ background-color: black;
   border-left: 2px solid white;
   height: 120px;
   position:absolute;
-  left: 35%;
+  left: 50%;
   display: inline-block;
   
 }
-
+img.logo{
+  margin-left: 260px;
+}
+.card-signup
+{
+  width:400px;
+  background-color: white;
+  margin-left: 20rem;
+  border-radius: 1%;
+}

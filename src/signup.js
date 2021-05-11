@@ -3,16 +3,18 @@ import React, { Component } from 'react';
 import { Input, Button, IconButton } from '@material-ui/core';
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
+
 // import GitHubIcon from '@material-ui/icons/GitHub';
 class Signup extends Component{
 	render() {
 		return (
 			<div className="Signup">
-				<div className="container">
 			
-			<img className="mt-4 ml-4 text-center" src="output-onlinepngtools.png"height="130"width="270"></img>
+			<div className="container">
 			
-			<div class = "vertical mt-4">
+			<img className="mt-4 logo" src="output-onlinepngtools.png"height="130"width="270"></img>
+			
+			<div class = "vertical float-left mt-4">
 			<h1 className="text-light mt-3 p-4">Meetings</h1>
 			</div>
 			
@@ -20,16 +22,14 @@ class Signup extends Component{
 			  
 			
 			</div>
+			
+			  
+			
+		
 	  
-					<div className="container d-flex mt-5">
-				<div className="container mt-5">
-			  <h1 className="text-light">Introduction a free and secure <br></br>video calling service accessible <br></br> for all</h1>
-				<p className="text-light">for more information, visit <a  className="text-success"href={"https://www.pclubuiet.com/"}>PClub</a></p>
-				</div>
-			 
-			   
-					   <div className="card w-50">
-				  <div className="card-header bg-success">
+					<div className="container  mt-5">
+					<div class="card-signup ">
+					<div className="card-header bg-success">
 					<h3 className="text-center">Sign Up</h3>
 				  
 				  </div>
@@ -39,13 +39,7 @@ class Signup extends Component{
 						<div className="input-group-prepend">
 						  <span className="input-group-text"><i className="fas fa-user" /></span>
 						</div>
-						<input type="text" className="form-control" placeholder="First Name" />
-					  </div>
-					  <div className="input-group form-group">
-						<div className="input-group-prepend">
-						  <span className="input-group-text"><i className="fas fa-user" /></span>
-						</div>
-						<input type="text" className="form-control" placeholder="Last Name" />
+						<input type="text" className="form-control" placeholder="Full Name" />
 					  </div>
 					  <div className="input-group form-group">
 						<div className="input-group-prepend">
@@ -55,7 +49,7 @@ class Signup extends Component{
 					  </div>
 					  <div className="input-group form-group">
 						<div className="input-group-prepend">
-						  <span className="input-group-text"><i className="fas fa-user" /></span>
+						  <span className="input-group-text"><i className="fas fa-user-circle" /></span>
 						</div>
 						<input type="text" className="form-control" placeholder="Create a username" />
 					  </div>
@@ -78,9 +72,8 @@ class Signup extends Component{
 					</div>
 					
 				  </div>
-				  
-				</div>
-				</div>
+			</div>
+			</div>
 			</div>
 		)
 	}
