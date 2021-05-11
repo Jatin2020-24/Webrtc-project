@@ -55,12 +55,10 @@ img.logo {
     margin-left: 20rem;
     border-radius: 1%;
 }
-.time{
-    width:220px;
+.time {
+    width: 220px;
     background-color: limegreen;
     margin-top: 4rem;
     border-bottom-right-radius: 5%;
-    border-top-right-radius:5%;
-    
-    
+    border-top-right-radius: 5%;
 }

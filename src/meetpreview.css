@@ -47,14 +47,19 @@
     height: 427px;
     border-radius: 11px 11px 11px 11px;
     margin: auto;
+    position: relative;
 }
 
-.video-controls {
+.video-controls > div {
+    display: inline-block;
     margin: auto;
-    align-items: flex-end;
-    width: 20px;
+    width: 184px;
+    height: 61px;
     background-color: black;
-    border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 0px 0px;
+    position: absolute; /* added */
+    bottom: 0; /* added */
+    left: 35%;
 }
 
 .ul-li {
@@ -63,6 +68,109 @@
 }
 
 .ul-li li {
-    display: inline;
+    display: inline-block;
     margin: auto;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    height: 50px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.vl {
+    border-right: 1px solid green;
+    width: 2px;
+    height: 50px;
+}
+
+.username {
+    background-color: white;
+    width: 427px;
+    height: 56px;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.label {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    height: 100%;
+    padding: 10px;
+}
+
+.last {
+    margin: auto;
+    width: 300px;
+
+    color: black;
+    background-color: white;
+}
+
+.w3review {
+    height: 50%;
+    background-color: white;
+    color: white;
+    padding: 10px 10px 10px 10px;
+}
+.button1 {
+    background-color: #37af4b;
+    font-size: 30px;
+    color: white;
+    margin-left: 10px;
+    width: 24.5%;
+    border-radius: 0px 10px 10px 0px;
+}
+.area {
+    background-color: aliceblue;
+    margin: 10px 10px 10px 10px;
+}
+div.box1 {
+    background-color: white;
+    width: 280px;
+    border-radius: 10px 10px 10px 10px;
+}
+div.box2 {
+    background-color: #37af4b;
+    font-size: 30px;
+    color: white;
+    width: 280px;
+    height: 51px;
+    padding-left: 50px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* background-color: #2196f3; */
+    padding: 10px;
+    width: fit-content;
+    border-spacing: 10px;
+    margin: auto;
+}
+.grid-item {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    /* padding: 20px; */
+    /* font-size: 30px; */
+    /* text-align: center; */
+    margin: 5px;
+}
+.spaces {
+    height: 150px;
+    width: 100%;
 }
