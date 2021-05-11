@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Input, Button, IconButton } from "@material-ui/core";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-import Meethome from "./meethome.js";
+
 import { Redirect } from "react-router";
 
 // import GitHubIcon from '@material-ui/icons/GitHub';
@@ -33,7 +33,6 @@ class Signin extends Component {
             console.log("user", user);
         });
     };
-
     render() {
         return (
             <div className="Sigin">

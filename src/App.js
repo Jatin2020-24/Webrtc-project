@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Meetend from "./meetend.js";
 import Meeting from "./meeting.js";
@@ -8,10 +8,22 @@ import Meethome from "./meethome.js";
 import Meetpreview from "./meetpreview.js";
 import "./App.css";
 
-class App extends Component {
-    render() {
+const App=()=> {
+ let time=new Date().toLocaleTimeString();
+ const date1=new Date().toDateString();
+const [ctime, setctime] = useState(time);
+const updatetime=()=>{
+time=new Date().toLocaleTimeString();
+setctime(time);
+};
+
+setInterval(updatetime,1000);
         return (
             <div>
+                 <div className="bg-success time float-left">
+                <h4 className="text-light text-center">&nbsp;&nbsp;{ctime}<br></br>{date1}</h4>
+                
+            </div>
                 <Router>
                     <Switch>
                         <Route path="/" exact component={Signin} />
@@ -27,10 +39,10 @@ class App extends Component {
                         />
                     </Switch>
                 </Router>
-            </div>
+               </div>
         );
     }
-}
+
 
 export default App;
 // export default Initial;
