@@ -2,40 +2,33 @@ import React, { Component } from "react";
 import { Input, Button, IconButton } from "@material-ui/core";
 import firebase from "firebase";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Redirect } from "react-router";
+import Fire from './firebase';
+import './App.css';
 
-// import GitHubIcon from '@material-ui/icons/GitHub';
-// import "./Home.css"
 
-firebase.initializeApp({
-    apiKey: "AIzaSyAVihggwV-iWKJDozK9eBa18N5tKeJqecg",
-    authDomain: "login-d970e.firebaseapp.com"
-});
-
-class Signin extends Component {
-    state = { isSignedIn: false };
-    uiConfig = {
+const Signin=()=>  {
+    
+    var uiConfig = {
         signInFlow: "popup",
+        signInSuccessUrl: '/meethome',
         signInOptions: [
             firebase.auth.GoogleAuthProvider.PROVIDER_ID,
 
             firebase.auth.GithubAuthProvider.PROVIDER_ID
         ],
-        callbacks: {
-            signInSuccess: () => false
-        }
+        tosUrl: '<your-tos-url>',
+        // Privacy policy url.
+        privacyPolicyUrl: '<your-privacy-policy-url>'
     };
 
-    componentDidMount = () => {
-        firebase.auth().onAuthStateChanged((user) => {
-            this.setState({ isSignedIn: !!user });
-            console.log("user", user);
-        });
-    };
-    render() {
+  
+    
         return (
+           
             <div className="Sigin">
+               
                 <div className="container">
                     <img
                         className="mt-4 logo"
@@ -118,18 +111,11 @@ class Signin extends Component {
                                 </a>
                             </div>
                         </div>
-                        {this.state.isSignedIn ? (
-                            <Redirect to="./meethome" />
-                        ) : (
-                            <StyledFirebaseAuth
-                                uiConfig={this.uiConfig}
-                                firebaseAuth={firebase.auth()}
-                            />
-                        )}
+                        <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={Fire.auth()}/>
                     </div>
                 </div>
             </div>
         );
     }
-}
+
 export default Signin;
