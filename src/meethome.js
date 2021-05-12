@@ -3,7 +3,7 @@ import { Input, Button, IconButton } from "@material-ui/core";
 import firebase from "firebase";
 import Signup from "./signup.js";
 import { Redirect } from "react-router";
-import "./meetHome.css";
+import "./meethome.css";
 // import GitHubIcon from '@material-ui/icons/GitHub';
 class Meethome extends Component
 {
