@@ -1,10 +1,10 @@
-form{
+.form1{
     padding-top: 10px;
     padding-left: 590px;
     padding-right: 590px;
 }
 
-.heading{
+.heading1{
     padding-top: 25px;
 }
 .or{
@@ -29,8 +29,11 @@ form{
     left: 0.5em;
     margin-right: -50px;
 }
-.btn{
+.btn1{
     margin-top: 17px;
     font-size: 19px;
     width: 340px
+}
+.logout{
+    background-color: black;
 }
